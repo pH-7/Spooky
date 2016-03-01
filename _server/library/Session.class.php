@@ -31,7 +31,7 @@ class Session
          */
         if (!is_local_host())
         {
-            $iTime = (int) time() + Config::SESSION_EXPIRATION;
+            $iTime = (int) Config::SESSION_EXPIRATION;
             session_set_cookie_params($iTime, Config::SESSION_PATH, Config::SESSION_DOMAIN, $bSecure, true);
         }
 
